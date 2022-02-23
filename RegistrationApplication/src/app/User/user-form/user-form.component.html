@@ -1,0 +1,29 @@
+<form novalidate #form="ngForm" (submit)="onSubmit(form)">
+    <input type="hidden" name="UserID" [value]="service.formData.UserId" />
+
+    <div class=" form-group">
+        <label>USER NAME</label>
+        <input class=" form-control form-control-lg" placeholder="Full Name" name="UserName" #UserName="ngModel"
+            [(ngModel)]="service.formData.UserName" required>
+    </div>
+    <div class=" form-group">
+        <label>USER EMAIL</label>
+        <input class="form-control form-control-lg" placeholder="Email Account" name="UserEmail" #UserEmail="ngModel"
+            [(ngModel)]="service.formData.UserEmail" required>
+    </div>
+    <div class="form-group">
+        <label>USER PASSWORD</label>
+        <input required type="password" class="form-control form-control-lg" placeholder="Password" name="UserPassword"
+            #UserPassword="ngModel" [(ngModel)]="service. formData.UserPassword">
+    </div>
+    <div class="form-group">
+        <label>USER TYPE</label>
+        <input required class="form-control form-control-lg" placeholder="Admin or User" name="UserType"
+            #UserType="ngModel" [(ngModel)]="service.formData.UserType">
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">Register</button>
+
+    </div>
+</form>

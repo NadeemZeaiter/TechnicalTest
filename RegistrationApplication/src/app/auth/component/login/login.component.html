@@ -1,0 +1,28 @@
+<div cłoss=" jumbotron py-3">
+    <h1 class="display-4 text-center">View Users</h1>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pd of service.list">
+                    <td>{{pd.UserName}}</td>
+                    <td>{{pd.UserEmail}}</td>
+                    <td>{{pd.UserType}}</td>
+                    <td>
+                        <i class="far fa-trash-alt fal-lg text-danger"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
